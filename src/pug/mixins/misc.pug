@@ -1,0 +1,5 @@
+mixin navLink(href,label)
+  a(href=`${href}` class="relative px-2 py-4 font-semibold text-white transition duration-300 nav-link hover:text-green-800") #{label}
+
+mixin sideLink(href,label, className)
+  a(href=`${href}` class=`relative inline-block px-2 py-1 text-xl text-white uppercase md:text-xl sidebar__link sidebar__link--${className}` id="side-link") #{label}

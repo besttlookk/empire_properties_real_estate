@@ -11,19 +11,17 @@ header(class="sticky top-0 z-40 bg-green-500 shadow-lg")
         span(class="text-lg font-semibold ") Property
       //- nav-list
       nav(class="hidden space-x-1 lg:flex ")
-        a(href="#" class="relative px-2 py-4 font-semibold text-green-900 nav-link nav-link--active") Home
-        a(href="#" class="relative px-2 py-4 font-semibold text-white transition duration-300 nav-link hover:text-green-800") Property
-        a(href="#" class="relative px-2 py-4 font-semibold text-white transition duration-300 nav-link hover:text-green-800") Services
-        a(href="#" class="relative px-2 py-4 font-semibold text-white transition duration-300 nav-link hover:text-green-800") How it works
-        a(href="#" class="relative px-2 py-4 font-semibold text-white transition duration-300 nav-link hover:text-green-800") Agent
-
-
-        a(href="#" class="relative px-2 py-4 font-semibold text-white duration-300 nav-link hover:text-green-800") About
-        a(href="#" class="relative px-2 py-4 font-semibold text-white duration-300 nav-link hover:text-green-800") Blog
-        a(href="#" class="relative px-2 py-4 font-semibold text-white duration-300 nav-link hover:text-green-800") Contact
-
+        +navLink("#home", "Home")
+        +navLink("#property", "Property")
+        +navLink("#service", "Services")
+        +navLink("#how", "How it works")
+        +navLink("#agent", "Agent")
+        +navLink("#about", "About")
+        +navLink("#blog", "Blog")
+        +navLink("#contact", "Contact")
 
     //- header-right
     div(class="flex items-center space-x-4")
       div(class="lg:hidden")
-        i.fa.fa-bars.fa-2x(class="text-white")
+        label(for="nav-toggle")
+          i.fa.fa-bars.fa-2x(class="text-white transition duration-500 transform cursor-pointer hover:rotate-180 active:scale-95" id="menu-icon")

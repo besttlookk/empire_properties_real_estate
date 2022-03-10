@@ -1,4 +1,6 @@
 //All styles can be added here.
+$color-primary-light: #10b981;
+$color-primary-dark: #06634c;
 
 @layer components {
   // for header links
@@ -18,6 +20,10 @@
     &:hover::after,
     &--active::after {
       transform: scale(1);
+    }
+
+    &--active {
+      color: #06634c;
     }
   }
 
@@ -46,5 +52,97 @@
     &:hover::after {
       transform: scaleY(1);
     }
+  }
+
+  // sidebar
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: radial-gradient(
+      $color-primary-light,
+      $color-primary-dark
+    );
+    transform: scaleY(0);
+    opacity: 0;
+    transform-origin: top;
+    transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.8s;
+
+    &__link {
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        white 50%
+      );
+      transform: translateX(-200%);
+      opacity: 0;
+      background-size: 220%;
+      // transition: transform 0.4s, opacity 0.4s;
+      transition: all 0.4s;
+
+      &:hover,
+      &:active {
+        background-position: 100%;
+        color: $color-primary-light;
+        transform: translateX(1rem);
+        // transition: all 0.4s;
+      }
+    }
+
+    &__link--1 {
+      transition-delay: 0.1s;
+    }
+
+    &__link--2 {
+      transition-delay: 0.2s;
+    }
+
+    &__link--3 {
+      transition-delay: 0.3s;
+    }
+
+    &__link--4 {
+      transition-delay: 0.4s;
+    }
+
+    &__link--5 {
+      transition-delay: 0.5s;
+    }
+
+    &__link--6 {
+      transition-delay: 0.6s;
+    }
+
+    &__link--7 {
+      transition-delay: 0.7s;
+    }
+
+    &__link--8 {
+      transition-delay: 0.8s;
+    }
+
+    &--active {
+      transform: scaleY(1);
+      transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+      opacity: 1;
+    }
+
+    &--active &__link {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-x: hidden;
   }
 }

@@ -103,6 +103,18 @@ function prodHTML() {
     .pipe(dest(options.paths.build.base));
 }
 
+function devStyles() {
+  const tailwindcss = require("tailwindcss");
+  return src(`${options.paths.src.css}/**/*.scss`)
+    .pipe(sass().on("error", sass.logError))
+    .pipe(dest(options.paths.src.css))
+    .pipe(
+      postcss([tailwindcss(options.config.tailwindjs), require("autoprefixer")])
+    )
+    .pipe(concat({ path: "style.css" }))
+    .pipe(dest(options.paths.dist.css));
+}
+
 function prodStyles() {
   return src(`${options.paths.dist.css}/**/*`)
     .pipe(

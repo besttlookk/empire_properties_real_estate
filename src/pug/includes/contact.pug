@@ -2,12 +2,12 @@
 div(class="")
   //- blog article- wrapper
   div(class="px-4 py-16 mx-auto text-center max-w-7xl")
-    h3(class="mb-4 text-3xl font-semibold text-center text-gray-700 lg:text-4xl") Contact Us
-    p(class="mb-10 text-xl text-center text-gray-600 lg:text-2xl") Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, sed!
+    h3(class="mb-4 text-3xl font-semibold text-center text-gray-700 lg:text-4xl" data-aos="fade-right" ) Contact Us
+    p(class="mb-10 text-xl text-center text-gray-600 lg:text-2xl" data-aos="fade-right" data-aos-delay="1000") Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, sed!
     //- card container
     div(class="relative flex flex-col py-6 mx-auto space-y-4 bg-gray-200 contact lg:flex-row lg:space-y-O")
       //- form area
-      form(class="flex flex-col w-4/5 px-6 py-4 mx-auto md:w-6/12 lg:px-0")
+      form(class="flex flex-col w-4/5 px-6 py-4 mx-auto md:w-6/12 lg:px-0" data-aos="fade-right" data-aos-delay="1000")
         +formInput("text", "Your Name")
         +formInput("email", "Your Email")
         +formInput("text", "Subject")
@@ -15,20 +15,20 @@ div(class="")
         button(class="py-2 text-white bg-green-500 border-none rounded outline-none focus:ring ring-offset-2 ring-offset-gray-200 ring-green-300") Send Message
 
       //- address area 
-      div(class="px-4 text-left")
-        div(class="p-4 mb-2 bg-white")
+      div(class="px-4 text-left" )
+        div(class="p-4 mb-2 bg-white" data-aos="fade-left" data-aos-delay="1000")
           p(class="font-bold text-gray-700") Address
           p(class="text-sm text-gray-600") Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, pariatur?
 
-        div(class="p-4 mb-2 bg-white")
+        div(class="p-4 mb-2 bg-white" data-aos="fade-left" data-aos-delay="1200")
             p(class="font-bold text-gray-700") Phone
             p(class="text-sm text-gray-600") +91 4343434343
 
-        div(class="p-4 mb-2 bg-white")
+        div(class="p-4 mb-2 bg-white" data-aos="fade-left" data-aos-delay="1400")
           p(class="font-bold text-gray-700") Email Address
           p(class="text-sm text-gray-600") randomemail@gmail.com
 
-        div(class="p-4 bg-white")
+        div(class="p-4 bg-white" data-aos="fade-left" data-aos-delay="1600")
           p(class="font-bold text-gray-700") Social 
           div(class="flex mt-1 space-x-4")
             i.fab.fa-facebook(class="text-blue-500 duration-300 transform cursor-pointer hover:scale-110")
@@ -40,15 +40,15 @@ div(class="")
 div(class="bg-green-500")
   //- wrapper
   div(class="px-4 py-10 mx-auto text-center max-w-7xl")
-    i.fas.fa-envelope-open-text.fa-3x(class="text-white")
-    p(class="my-4 text-lg font-semibold text-white") Join our mailing to get weekly updates on our exclusive deals.
-    form()
+    i.fas.fa-envelope-open-text.fa-3x(class="text-white" data-aos="fade-up" )
+    p(class="my-4 text-lg font-semibold text-white" data-aos="fade-left" data-aos-delay="1000") Join our mailing to get weekly updates on our exclusive deals.
+    form(data-aos="fade-right" data-aos-delay="1200")
       +formInput("email", "Email address")
       button(class="inline-block px-4 py-2 ml-6 text-green-500 bg-white border-none rounded outline-none") Subscribe
       
 
 div(class="bg-gray-200")
   //- wrapper
-  div(class="px-4 py-4 mx-auto text-center max-w-7xl")
+  div(class="px-4 py-4 mx-auto text-center max-w-7xl" data-aos="zoom-in" data-aos-delay="1000")
     p(class="text-base md:text-lg lg:text-xl") Don’t forget to follow us on Instagram 
       a(class="hover:text-blue-500" href="#") @empire_property

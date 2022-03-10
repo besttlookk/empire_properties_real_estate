@@ -1,45 +1,49 @@
 extends templates/layout  
 
 block main 
+
+  //- Sidebar
+  include includes/sidebar 
+  
   //- search section
   section(class="bg-white")
   include includes/search
   
   //- Hero section
-  section(class="relative bg-left bg-cover bg-hero h-vh-7")
+  section(class="relative bg-left bg-cover bg-hero h-vh-7" id="home")
     //- overlay 
     div(class="absolute inset-0 bg-black opacity-70" )
     include includes/hero
 
   //- Property section
-  section()
+  section(id="property")
     include includes/property
 
 
   //- Help section
-  section(class="relative bg-center bg-cover bg-help")
+  section(class="relative bg-center bg-cover bg-help" id="service")
     //- overlay 
     div(class="absolute inset-0 bg-black opacity-50" )
     include includes/services
 
   //- How it works
-  section(class="bg-gray-200")
+  section(class="bg-gray-200" id="how")
     include includes/how
 
   //- Agent
-  section(class="")
+  section(class="" id="agent")
     include includes/agent
 
   //- About section
-  section(class="relative bg-cover bg-about")
+  section(class="relative bg-cover bg-about" id="about")
     //- overlay 
     div(class="absolute inset-0 bg-black opacity-70" )
     include includes/about
 
   //- Blog section
-  section(class="")
+  section(class="" id="blog")
     include includes/blog
 
   //- Contact section
-  section   
+  section(id="contact") 
     include includes/contact
