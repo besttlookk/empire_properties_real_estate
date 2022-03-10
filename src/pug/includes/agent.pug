@@ -1,0 +1,12 @@
+//- wrapper
+div(class="py-16 mx-auto text-center max-w-7xl")
+  //- 
+  h3(class="mb-8 text-3xl font-semibold text-gray-700 lg:text-5xl md:text-4xl") Our Agents
+  p(class="px-16 mt-2 text-center text-gray-500 md:px-20 lg:px-32") Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, voluptatem. Lorem ipsum dolor sit amet.
+
+  //- agents-card-wrapoer
+  div(class="px-24 mt-6 lg:mt-12")
+    div(class="grid grid-cols-1 gap-4 lg:gap-6 md:grid-cols-2 lg:grid-cols-3")
+      each agent in agentCardArr
+        +agentCard(agent)
+    

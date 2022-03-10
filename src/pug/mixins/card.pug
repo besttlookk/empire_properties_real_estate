@@ -1,0 +1,72 @@
+mixin card(cardData)
+   div(class="flex flex-col border rounded shadow-md ")
+      //- card-image
+      div(class="overflow-hidden h-52")
+        img(alt="card-image" src=`./img/property-${cardData.image}.jpg` class="object-cover w-full h-full transition duration-1000 transform hover:scale-105")
+      //- card-content
+      div(class="flex-1 p-4")
+        p(class="text-sm font-bold text-gray-500") Rs #{cardData.price}
+        //- card-heading
+        h3(class="text-lg font-semibold text-gray-600 lg:text-xl") #{cardData.title}
+        p(class="my-2 text-sm text-gray-500") Lorem ipsum dolor sit amet consectetur adipisicing elit. At in molestias quos, odit facere, consectetur ut sint recusandae veritatis alias expedita eaque libero. Tempore illo commodi,
+        a(class="text-sm font-semibold text-green-500 underline cursor-pointer") Find out More 
+      //- card-footer
+      div(class="flex justify-between px-4 py-2 text-xs font-semibold text-gray-500 border-t border-gray-100")
+        div(class="")
+          //- ICON
+          i.fa.fa-bed
+          span(class="ml-1") #{cardData.bed} Beds
+        div(class="")
+          //- ICON
+          i.fa.fa-bath
+          span(class="ml-1") #{cardData.bath} Baths
+        div(class="")
+          //- ICON
+          i.fa.fa-warehouse
+          span(class="ml-1") #{cardData.garage} Garage
+        div(class="")
+          //- ICON
+          i.fa.fa-building
+          span(class="ml-1") #{cardData.area} Sq. Ft.
+
+
+mixin helpCard(cardData)
+  div(class="flex flex-col px-8 py-12 space-y-3 text-white bg-green-500 ")
+    i.fa.fa-3x(class=`fa-${cardData.iconName} font-thin`)
+    p(class="font-bold") #{cardData.title}
+    p(class="px-2 text-xs text-white") Lorem ipsum dolor sit amet consectetur adipisicing elit. iure voluptatum animi placeat autem ullam quos velit sequi inventore eum dicta. Aliquid deleniti 
+
+
+mixin agentCard(cardData)
+  div(class="flex flex-col border rounded shadow-md")
+    //- card image
+    div(class="overflow-hidden h-80 lg:h-96")
+      img(alt="card-img" src=`./img/avatar-${cardData.image}.jpg` class="object-cover object-top w-full h-full transition duration-1000 transform object-fit hover:scale-105")
+   
+    //- card-content
+    div(class="p-1 border-b border-gray-300")
+      p(class="text-sm font-semibold text-gray-600 lg:text-base ") #{cardData.name}
+      //- p(class="") listing: 
+      //-   span(class="") #{cardData.listing} properties
+
+    //- social icons
+    div(class="flex justify-center p-2 space-x-4")
+      i.fab.fa-facebook(class="text-blue-500 duration-300 transform cursor-pointer hover:scale-110")
+      i.fab.fa-linkedin(class="text-blue-800 duration-300 transform cursor-pointer hover:scale-110")
+      i.fab.fa-twitter(class="text-blue-400 duration-300 transform cursor-pointer hover:scale-110")
+      i.fas.fa-envelope(class="text-red-500 duration-300 transform cursor-pointer hover:scale-110")
+
+
+
+mixin blogCard(cardData)
+  div(class="flex flex-col space-y-3 bg-white border rounded shadow-md")
+      //- card-image
+      div(class="overflow-hidden h-52")
+        img(alt="card-image" src=`./img/blog-${cardData.image}.jpg` class="object-cover w-full h-full transition duration-1000 transform hover:scale-105")
+
+      //- card-content
+      div(class="px-4 py-2 text-left ")
+        p(class="font-semibold text-gray-500 text-xm") #{cardData.date}
+        h4(class="mb-2 text-lg font-bold text-gray-800 lg:text-2xl") #{cardData.title}
+        p(class="mb-2 text-sm text-gray-500 text-600 lg:text-base") Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit blanditiis neque pariatur deleniti dolorum corrupti? Lorem ipsum dolor sit amet.
+        a(class="text-xs underline hover:text-blue-500" href="#") Read More

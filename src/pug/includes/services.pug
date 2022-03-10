@@ -1,0 +1,8 @@
+div(class="relative px-4 py-16 mx-auto text-center max-w-7xl")
+  h3(class="mb-8 text-3xl font-semibold text-white lg:text-5xl md:text-4xl") Our Services
+  p(class="mt-1 text-gray-50") Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores, eligendi.
+  
+  div(class="grid grid-cols-1 gap-3 mt-2 md:grid-cols-2 lg:grid-cols-3 lg:gap-0")
+    each helpCard in helpCardArr 
+      +helpCard(helpCard)
+  

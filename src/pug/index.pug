@@ -1,0 +1,45 @@
+extends templates/layout  
+
+block main 
+  //- search section
+  section(class="bg-white")
+  include includes/search
+  
+  //- Hero section
+  section(class="relative bg-left bg-cover bg-hero h-vh-7")
+    //- overlay 
+    div(class="absolute inset-0 bg-black opacity-70" )
+    include includes/hero
+
+  //- Property section
+  section()
+    include includes/property
+
+
+  //- Help section
+  section(class="relative bg-center bg-cover bg-help")
+    //- overlay 
+    div(class="absolute inset-0 bg-black opacity-50" )
+    include includes/services
+
+  //- How it works
+  section(class="bg-gray-200")
+    include includes/how
+
+  //- Agent
+  section(class="")
+    include includes/agent
+
+  //- About section
+  section(class="relative bg-cover bg-about")
+    //- overlay 
+    div(class="absolute inset-0 bg-black opacity-70" )
+    include includes/about
+
+  //- Blog section
+  section(class="")
+    include includes/blog
+
+  //- Contact section
+  section   
+    include includes/contact
