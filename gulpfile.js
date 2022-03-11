@@ -40,7 +40,7 @@ function previewReload(done) {
 //! DEV: To Convert PUG Files to HTML
 function pugTask() {
   return src(`${options.paths.src.base}/pug/index.pug`)
-    .pipe(pug({ pretty: true }))
+    .pipe(pug())
     .pipe(dest(options.paths.src.base));
 }
 
