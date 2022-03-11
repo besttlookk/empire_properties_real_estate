@@ -156,6 +156,4 @@ exports.default = series(
 exports.build = series(
   prodClean, // Clean Build Folder
   parallel(prodStyles, prodScripts, prodHTML), //Run All tasks in parallel
-  livePreview, // Live Preview Build
-  watchFiles // Watch for Live Changes
 );
