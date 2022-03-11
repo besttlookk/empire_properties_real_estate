@@ -175,6 +175,5 @@ exports.default = series(
 
 exports.build = series(
   prodClean, // Clean Build Folder
-  series(prodHTML, parallel(prodStyles, prodScripts)), //Run All tasks in parallel
-  buildFinish
+  parallel(prodStyles, prodScripts, prodHTML) //Run All tasks in parallel
 );
