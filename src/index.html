@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empire Properties</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita:wght@400;700;800&amp;display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/806ac7a0a4.js" crossorigin="anonymous" defer></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="./js/script.js" defer> </script>
+  </head>
+  <body> 
+    <header class="sticky top-0 z-40 bg-green-500 shadow-lg">
+      <div class="flex items-center justify-between px-4 mx-auto max-w-7xl">
+        <div class="flex items-center space-x-7"><a class="px-2 py-4 text-lg text-white font-sansita" href="/"><span class="text-lg font-semibold ">Empire </span><i class="fab fa-empire fa-lg mr-1 "></i><span class="text-lg font-semibold ">Property</span></a>
+          <nav class="hidden space-x-1 lg:flex "><a class="relative px-2 py-4 font-semibold text-white transition duration-300 nav-link hover:text-green-800" href="#home">Home</a><a class="relative px-2 py-4 font-semibold text-white transition duration-300 nav-link hover:text-green-800" href="#property">Property</a><a class="relative px-2 py-4 font-semibold text-white transition duration-300 nav-link hover:text-green-800" href="#service">Services</a><a class="relative px-2 py-4 font-semibold text-white transition duration-300 nav-link hover:text-green-800" href="#how">How it works</a><a class="relative px-2 py-4 font-semibold text-white transition duration-300 nav-link hover:text-green-800" href="#agent">Agent</a><a class="relative px-2 py-4 font-semibold text-white transition duration-300 nav-link hover:text-green-800" href="#about">About</a><a class="relative px-2 py-4 font-semibold text-white transition duration-300 nav-link hover:text-green-800" href="#blog">Blog</a><a class="relative px-2 py-4 font-semibold text-white transition duration-300 nav-link hover:text-green-800" href="#contact">Contact</a>
+          </nav>
+        </div>
+        <div class="flex items-center space-x-4">
+          <div class="lg:hidden">
+            <label for="nav-toggle"><i class="fa fa-bars fa-2x text-white transition duration-500 transform cursor-pointer hover:rotate-180 active:scale-95" id="menu-icon"></i></label>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="z-50 flex items-center justify-center sidebar lg:hidden" id="sidebar">
+      <label class="absolute right-6 top-6" for="nav-toggle"><i class="fas fa-xmark fa-2x text-white transition duration-500 transform cursor-pointer hover:rotate-180 active:scale-95" id="cancel-icon"></i></label>
+      <nav class="flex flex-col space-y-2 text-center color-white"><a class="relative inline-block px-2 py-1 text-xl text-white uppercase md:text-xl sidebar__link" href="#home" id="side-link">Home</a><a class="relative inline-block px-2 py-1 text-xl text-white uppercase md:text-xl sidebar__link" href="#property" id="side-link">Property</a><a class="relative inline-block px-2 py-1 text-xl text-white uppercase md:text-xl sidebar__link" href="#service" id="side-link">Services</a><a class="relative inline-block px-2 py-1 text-xl text-white uppercase md:text-xl sidebar__link" href="#how" id="side-link">How it Works</a><a class="relative inline-block px-2 py-1 text-xl text-white uppercase md:text-xl sidebar__link" href="#agent" id="side-link">Agent </a><a class="relative inline-block px-2 py-1 text-xl text-white uppercase md:text-xl sidebar__link" href="#about" id="side-link">About</a><a class="relative inline-block px-2 py-1 text-xl text-white uppercase md:text-xl sidebar__link" href="#blog" id="side-link">Blog</a><a class="relative inline-block px-2 py-1 text-xl text-white uppercase md:text-xl sidebar__link" href="#contact" id="side-link">Contact</a>
+      </nav>
+    </div>
+    <section class="bg-white"></section>
+    <div class="px-4 mx-auto max-w-7xl">
+      <form class="flex justify-center w-4/5 py-4 mx-auto space-x-4">
+        <input class="flex-1 inline-block px-4 py-2 text-sm border rounded outline-none" type="text" placeholder="Search by state,postcode or suburb">
+        <button class="inline-block w-20 px-5 text-sm font-semibold text-white bg-green-500 rounded hover:bg-green-400" type="submit">Search</button>
+      </form>
+    </div>
+    <section class="relative bg-left bg-cover bg-hero h-vh-7" id="home">
+      <div class="absolute inset-0 bg-black opacity-70"></div>
+      <div class="relative z-10 flex justify-center h-full px-4 mx-auto max-w-7xl"> 
+        <div class="flex-1 px-4 mt-24 text-center lg:mt-28">
+          <h1 class="text-5xl font-extrabold tracking-tight sm:text-5xl md:text-6xl font-sansita lg:text-7xl " data-aos="fade-up"> <span class="block text-white">Find Your Best</span><span class="block text-green-500">Dream Home</span></h1>
+          <p class="w-4/5 mx-auto mt-10 text-base text-center text-gray-100 lg:w-3/5" data-aos="fade-right" dada-aos-delay="1000">At empire properties, we ensure that our clients get the best properties at affordable prices. Luxuary is our proirity and budget is our constrain. Pick and choose from 2000+ properties across the globe.</p>
+          <div class="mt-8 md:flex md:justify-center md:space-x-2">
+            <div class="w-3/5 mx-auto md:mx-6 lg:w-64 md:w-64" data-aos="zoom-in" data-aos-delay="1100"><a class="flex justify-center px-8 py-3 text-white bg-green-500 rounded-md hover:bg-green-400" href="#">View Properties</a></div>
+            <div class="w-3/5 mx-auto mt-2 md:mx- md:mt-0 lg:w-64 md:w-44" data-aos="zoom-in" data-aos-delay="1100"><a class="flex justify-center px-8 py-3 text-green-700 bg-green-100 rounded-md" href="#">Learn More</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="property">
+      <div>
+        <div class="px-4 pb-20 mx-auto max-w-7xl">
+          <h2 class="mt-10 text-3xl text-gray-700 md:text-4xl lg:text-5xl">Searching for the Best Places?</h2>
+          <div class="grid grid-cols-1 gap-3 mt-5 pb-18 md:grid-cols-2 lg:grid-cols-3 lg:mt-10">
+            <div class="flex flex-col border rounded shadow-md " data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+              <div class="overflow-hidden h-52"><img class="object-cover w-full h-full transition duration-1000 transform hover:scale-105" alt="card-image" src="https://res.cloudinary.com/besttlookk/image/upload/v1646967862/real_estate/property-1_jeqbch.jpg"/></div>
+              <div class="flex-1 p-4">
+                <p class="text-sm font-bold text-gray-500">Rs 60,00,000</p>
+                <h3 class="text-lg font-semibold text-gray-600 lg:text-xl">Country Style House with beautiful garden and terrace</h3>
+                <p class="my-2 text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. At in molestias quos, odit facere, consectetur ut sint recusandae veritatis alias expedita eaque libero. Tempore illo commodi,</p><a class="text-sm font-semibold text-green-500 underline cursor-pointer">Find out More </a>
+              </div>
+              <div class="flex justify-between px-4 py-2 text-xs font-semibold text-gray-500 border-t border-gray-100">
+                <div><i class="fa fa-bed"></i><span class="ml-1">4 Beds</span></div>
+                <div><i class="fa fa-bath"></i><span class="ml-1">2 Baths</span></div>
+                <div><i class="fa fa-warehouse"></i><span class="ml-1">1 Garage</span></div>
+                <div><i class="fa fa-building"></i><span class="ml-1">2561 Sq. Ft.</span></div>
+              </div>
+            </div>
+            <div class="flex flex-col border rounded shadow-md " data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+              <div class="overflow-hidden h-52"><img class="object-cover w-full h-full transition duration-1000 transform hover:scale-105" alt="card-image" src="https://res.cloudinary.com/besttlookk/image/upload/v1646967863/real_estate/property-2_umllny.jpg"/></div>
+              <div class="flex-1 p-4">
+                <p class="text-sm font-bold text-gray-500">Rs 55,00,000</p>
+                <h3 class="text-lg font-semibold text-gray-600 lg:text-xl">Place Perfect For Nature Lovers</h3>
+                <p class="my-2 text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. At in molestias quos, odit facere, consectetur ut sint recusandae veritatis alias expedita eaque libero. Tempore illo commodi,</p><a class="text-sm font-semibold text-green-500 underline cursor-pointer">Find out More </a>
+              </div>
+              <div class="flex justify-between px-4 py-2 text-xs font-semibold text-gray-500 border-t border-gray-100">
+                <div><i class="fa fa-bed"></i><span class="ml-1">6 Beds</span></div>
+                <div><i class="fa fa-bath"></i><span class="ml-1">2 Baths</span></div>
+                <div><i class="fa fa-warehouse"></i><span class="ml-1">1 Garage</span></div>
+                <div><i class="fa fa-building"></i><span class="ml-1">2961 Sq. Ft.</span></div>
+              </div>
+            </div>
+            <div class="flex flex-col border rounded shadow-md " data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+              <div class="overflow-hidden h-52"><img class="object-cover w-full h-full transition duration-1000 transform hover:scale-105" alt="card-image" src="https://res.cloudinary.com/besttlookk/image/upload/v1646967863/real_estate/property-3_jziupm.jpg"/></div>
+              <div class="flex-1 p-4">
+                <p class="text-sm font-bold text-gray-500">Rs 48,50,999</p>
+                <h3 class="text-lg font-semibold text-gray-600 lg:text-xl">Place Perfect For Nature Lovers</h3>
+                <p class="my-2 text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. At in molestias quos, odit facere, consectetur ut sint recusandae veritatis alias expedita eaque libero. Tempore illo commodi,</p><a class="text-sm font-semibold text-green-500 underline cursor-pointer">Find out More </a>
+              </div>
+              <div class="flex justify-between px-4 py-2 text-xs font-semibold text-gray-500 border-t border-gray-100">
+                <div><i class="fa fa-bed"></i><span class="ml-1">4 Beds</span></div>
+                <div><i class="fa fa-bath"></i><span class="ml-1">2 Baths</span></div>
+                <div><i class="fa fa-warehouse"></i><span class="ml-1">1 Garage</span></div>
+                <div><i class="fa fa-building"></i><span class="ml-1">2461 Sq. Ft.</span></div>
+              </div>
+            </div>
+            <div class="flex flex-col border rounded shadow-md " data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+              <div class="overflow-hidden h-52"><img class="object-cover w-full h-full transition duration-1000 transform hover:scale-105" alt="card-image" src="https://res.cloudinary.com/besttlookk/image/upload/v1646967863/real_estate/property-4_koroef.jpg"/></div>
+              <div class="flex-1 p-4">
+                <p class="text-sm font-bold text-gray-500">Rs 75,00,000</p>
+                <h3 class="text-lg font-semibold text-gray-600 lg:text-xl">Place Perfect For Nature Lovers</h3>
+                <p class="my-2 text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. At in molestias quos, odit facere, consectetur ut sint recusandae veritatis alias expedita eaque libero. Tempore illo commodi,</p><a class="text-sm font-semibold text-green-500 underline cursor-pointer">Find out More </a>
+              </div>
+              <div class="flex justify-between px-4 py-2 text-xs font-semibold text-gray-500 border-t border-gray-100">
+                <div><i class="fa fa-bed"></i><span class="ml-1">3 Beds</span></div>
+                <div><i class="fa fa-bath"></i><span class="ml-1">2 Baths</span></div>
+                <div><i class="fa fa-warehouse"></i><span class="ml-1">1 Garage</span></div>
+                <div><i class="fa fa-building"></i><span class="ml-1">2161 Sq. Ft.</span></div>
+              </div>
+            </div>
+            <div class="flex flex-col border rounded shadow-md " data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+              <div class="overflow-hidden h-52"><img class="object-cover w-full h-full transition duration-1000 transform hover:scale-105" alt="card-image" src="https://res.cloudinary.com/besttlookk/image/upload/v1646967863/real_estate/property-5_kghq95.jpg"/></div>
+              <div class="flex-1 p-4">
+                <p class="text-sm font-bold text-gray-500">Rs 85,00,000</p>
+                <h3 class="text-lg font-semibold text-gray-600 lg:text-xl">Place Perfect For Nature Lovers</h3>
+                <p class="my-2 text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. At in molestias quos, odit facere, consectetur ut sint recusandae veritatis alias expedita eaque libero. Tempore illo commodi,</p><a class="text-sm font-semibold text-green-500 underline cursor-pointer">Find out More </a>
+              </div>
+              <div class="flex justify-between px-4 py-2 text-xs font-semibold text-gray-500 border-t border-gray-100">
+                <div><i class="fa fa-bed"></i><span class="ml-1">7 Beds</span></div>
+                <div><i class="fa fa-bath"></i><span class="ml-1">3 Baths</span></div>
+                <div><i class="fa fa-warehouse"></i><span class="ml-1">1 Garage</span></div>
+                <div><i class="fa fa-building"></i><span class="ml-1">3561 Sq. Ft.</span></div>
+              </div>
+            </div>
+            <div class="flex flex-col border rounded shadow-md " data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+              <div class="overflow-hidden h-52"><img class="object-cover w-full h-full transition duration-1000 transform hover:scale-105" alt="card-image" src="https://res.cloudinary.com/besttlookk/image/upload/v1646967863/real_estate/property-6_lvmz9b.jpg"/></div>
+              <div class="flex-1 p-4">
+                <p class="text-sm font-bold text-gray-500">Rs 48,00,000</p>
+                <h3 class="text-lg font-semibold text-gray-600 lg:text-xl">Place Perfect For Nature Lovers</h3>
+                <p class="my-2 text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. At in molestias quos, odit facere, consectetur ut sint recusandae veritatis alias expedita eaque libero. Tempore illo commodi,</p><a class="text-sm font-semibold text-green-500 underline cursor-pointer">Find out More </a>
+              </div>
+              <div class="flex justify-between px-4 py-2 text-xs font-semibold text-gray-500 border-t border-gray-100">
+                <div><i class="fa fa-bed"></i><span class="ml-1">5 Beds</span></div>
+                <div><i class="fa fa-bath"></i><span class="ml-1">2 Baths</span></div>
+                <div><i class="fa fa-warehouse"></i><span class="ml-1">1 Garage</span></div>
+                <div><i class="fa fa-building"></i><span class="ml-1">2761 Sq. Ft.</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-gray-200">
+        <div class="flex flex-col items-center px-4 py-10 mx-auto lg:py-16 lg:flex-row max-w-7xl">
+          <div class="pr-10 mb-8 text-center lg:w-2/5 lg:mb-0 lg:text-left">
+            <h4 class="text-2xl text-gray-700 ">Explore by Property Type </h4>
+            <p class="my-2 text-sm text-gray-500 ">Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem, ipsum dolor.</p>
+            <div class="mt-4"><a class="inline-block px-4 py-2 text-white bg-green-500 rounded cursor-pointer hover:bg-green-400">View All Properties</a></div>
+          </div>
+          <div class="flex flex-1 bg-white">
+            <div class="relative flex flex-col items-center w-1/4 p-8 space-y-4 explore-item"><i class="fas fa-house-chimney fa-3x text-gray-700"></i>
+              <p class="text-xs font-semibold text-center text-gray-600 hover:text-green-500 hover:underline">Home & Appartment</p>
+            </div>
+            <div class="relative flex flex-col items-center w-1/4 p-8 space-y-4 explore-item "><i class="fas fa-hotel fa-3x text-gray-700"></i>
+              <p class="text-xs font-semibold text-center text-gray-600 hover:text-green-500 hover:underline">Vila </p>
+            </div>
+            <div class="relative flex flex-col items-center w-1/4 p-8 space-y-4 explore-item"><i class="fas fa-building-columns fa-3x text-gray-700"></i>
+              <p class="text-xs font-semibold text-center text-gray-600 hover:text-green-500 hover:underline">Studio </p>
+            </div>
+            <div class="relative flex flex-col items-center w-1/4 p-8 space-y-4 explore-item"><i class="fas fa-suitcase fa-3x text-gray-700"></i>
+              <p class="text-xs font-semibold text-center text-gray-600 hover:underline hover:text-green-500 ">Office</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="relative bg-center bg-cover bg-help" id="service">
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <div class="relative px-4 py-16 mx-auto text-center max-w-7xl">
+        <h3 class="mb-4 text-3xl font-semibold text-white lg:mb-6 lg:text-5xl md:text-4xl" data-aos="fade-up">Our Services</h3>
+        <p class="mb-8 text-gray-50" data-aos="fade-right" data-aos-delay="800">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores, eligendi.</p>
+        <div class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 lg:gap-0">
+          <div class="flex flex-col px-8 py-12 space-y-3 text-white bg-green-500" data-aos="fade-right" data-aos-delay="800"><i class="fa fa-3x fa-magnifying-glass-location font-thin"></i>
+            <p class="font-bold">Find Places Anywhere in the World</p>
+            <p class="px-2 text-xs text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. iure voluptatum animi placeat autem ullam quos velit sequi inventore eum dicta. Aliquid deleniti </p>
+          </div>
+          <div class="flex flex-col px-8 py-12 space-y-3 text-white bg-green-500" data-aos="fade-up" data-aos-delay="1000"><i class="fa fa-3x fa-user-secret font-thin"></i>
+            <p class="font-bold">We have Agents</p>
+            <p class="px-2 text-xs text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. iure voluptatum animi placeat autem ullam quos velit sequi inventore eum dicta. Aliquid deleniti </p>
+          </div>
+          <div class="flex flex-col px-8 py-12 space-y-3 text-white bg-green-500" data-aos="fade-left" data-aos-delay="1200"><i class="fa fa-3x fa-house-crack font-thin"></i>
+            <p class="font-bold">Buy &amp; Rent Modern Properties </p>
+            <p class="px-2 text-xs text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. iure voluptatum animi placeat autem ullam quos velit sequi inventore eum dicta. Aliquid deleniti </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-gray-200" id="how">
+      <div class="px-4 py-16 mx-auto text-center max-w-7xl">
+        <h3 class="text-3xl text-gray-700 lg:text-5xl md:text-4xl" data-aos="fade-up">How it Works </h3>
+        <p class="mt-2 text-gray-500" data-aos="fade-right" data-aos-delay="800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem hic ut odit! Animi, hic veritatis?</p>
+        <div class="grid grid-cols-1 gap-10 mt-8 md:grid-cols-2 lg:grid-cols-3">
+          <div class="text-center" data-aos="fade-right" data-aos-delay="800">
+            <div class="flex items-center justify-center w-16 h-16 mx-auto text-white bg-green-500 rounded-full"><span class="text-4xl">1</span></div>
+            <h4 class="mt-8 mb-4 font-semibold">Evaluate Your Property </h4>
+            <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, blanditiis. Et veniam eligendi, ad deleniti dicta cum officiis necessitatibus ex exercitationem voluptas enim sit reprehenderit.</p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="1000">
+            <div class="flex items-center justify-center w-16 h-16 mx-auto text-white bg-green-500 rounded-full"><span class="text-4xl">2</span></div>
+            <h4 class="mt-8 mb-4 font-semibold">Meet Your Agent</h4>
+            <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, blanditiis. Et veniam eligendi, ad deleniti dicta cum officiis necessitatibus ex exercitationem voluptas enim sit reprehenderit.</p>
+          </div>
+          <div data-aos="fade-left" data-aos-delay="1200">
+            <div class="flex items-center justify-center w-16 h-16 mx-auto text-white bg-green-500 rounded-full"><span class="text-4xl">3</span></div>
+            <h4 class="mt-8 mb-4 font-semibold">Close the Deal</h4>
+            <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, blanditiis. Et veniam eligendi, ad deleniti dicta cum officiis necessitatibus ex exercitationem voluptas enim sit reprehenderit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="agent">
+      <div class="py-16 mx-auto text-center max-w-7xl">
+        <h3 class="mb-8 text-3xl font-semibold text-gray-700 lg:text-5xl md:text-4xl" data-aos="fade-up">Our Agents</h3>
+        <p class="px-16 mt-2 text-center text-gray-500 md:px-20 lg:px-32" data-aos="fade-right" data-aos-delay="800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, voluptatem. Lorem ipsum dolor sit amet.</p>
+        <div class="px-24 mt-6 lg:mt-12">
+          <div class="grid grid-cols-1 gap-4 lg:gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div class="flex flex-col border rounded shadow-md" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+              <div class="overflow-hidden h-80 lg:h-96"><img class="object-cover object-top w-full h-full transition duration-1000 transform object-fit hover:scale-105" alt="card-img" src="https://res.cloudinary.com/besttlookk/image/upload/v1646967861/real_estate/avatar-1_u3sejt.jpg"/></div>
+              <div class="p-1 border-b border-gray-300">
+                <p class="text-sm font-semibold text-gray-600 lg:text-base ">Josh Woodward</p>
+              </div>
+              <div class="flex justify-center p-2 space-x-4"><i class="fab fa-facebook text-blue-500 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fab fa-linkedin text-blue-800 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fab fa-twitter text-blue-400 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fas fa-envelope text-red-500 duration-300 transform cursor-pointer hover:scale-110"></i></div>
+            </div>
+            <div class="flex flex-col border rounded shadow-md" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+              <div class="overflow-hidden h-80 lg:h-96"><img class="object-cover object-top w-full h-full transition duration-1000 transform object-fit hover:scale-105" alt="card-img" src="https://res.cloudinary.com/besttlookk/image/upload/v1646967861/real_estate/avatar-2_v1upno.jpg"/></div>
+              <div class="p-1 border-b border-gray-300">
+                <p class="text-sm font-semibold text-gray-600 lg:text-base ">Michael Long</p>
+              </div>
+              <div class="flex justify-center p-2 space-x-4"><i class="fab fa-facebook text-blue-500 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fab fa-linkedin text-blue-800 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fab fa-twitter text-blue-400 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fas fa-envelope text-red-500 duration-300 transform cursor-pointer hover:scale-110"></i></div>
+            </div>
+            <div class="flex flex-col border rounded shadow-md" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+              <div class="overflow-hidden h-80 lg:h-96"><img class="object-cover object-top w-full h-full transition duration-1000 transform object-fit hover:scale-105" alt="card-img" src="https://res.cloudinary.com/besttlookk/image/upload/v1646967861/real_estate/avatar-3_ta6uda.jpg"/></div>
+              <div class="p-1 border-b border-gray-300">
+                <p class="text-sm font-semibold text-gray-600 lg:text-base ">Alexander Vaughan</p>
+              </div>
+              <div class="flex justify-center p-2 space-x-4"><i class="fab fa-facebook text-blue-500 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fab fa-linkedin text-blue-800 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fab fa-twitter text-blue-400 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fas fa-envelope text-red-500 duration-300 transform cursor-pointer hover:scale-110"></i></div>
+            </div>
+            <div class="flex flex-col border rounded shadow-md" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+              <div class="overflow-hidden h-80 lg:h-96"><img class="object-cover object-top w-full h-full transition duration-1000 transform object-fit hover:scale-105" alt="card-img" src="https://res.cloudinary.com/besttlookk/image/upload/v1646967861/real_estate/avatar-4_dwafg9.jpg"/></div>
+              <div class="p-1 border-b border-gray-300">
+                <p class="text-sm font-semibold text-gray-600 lg:text-base ">Mia Austin</p>
+              </div>
+              <div class="flex justify-center p-2 space-x-4"><i class="fab fa-facebook text-blue-500 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fab fa-linkedin text-blue-800 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fab fa-twitter text-blue-400 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fas fa-envelope text-red-500 duration-300 transform cursor-pointer hover:scale-110"></i></div>
+            </div>
+            <div class="flex flex-col border rounded shadow-md" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+              <div class="overflow-hidden h-80 lg:h-96"><img class="object-cover object-top w-full h-full transition duration-1000 transform object-fit hover:scale-105" alt="card-img" src="https://res.cloudinary.com/besttlookk/image/upload/v1646967861/real_estate/avatar-5_t6gbmh.jpg"/></div>
+              <div class="p-1 border-b border-gray-300">
+                <p class="text-sm font-semibold text-gray-600 lg:text-base ">Maisie Bradley</p>
+              </div>
+              <div class="flex justify-center p-2 space-x-4"><i class="fab fa-facebook text-blue-500 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fab fa-linkedin text-blue-800 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fab fa-twitter text-blue-400 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fas fa-envelope text-red-500 duration-300 transform cursor-pointer hover:scale-110"></i></div>
+            </div>
+            <div class="flex flex-col border rounded shadow-md" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+              <div class="overflow-hidden h-80 lg:h-96"><img class="object-cover object-top w-full h-full transition duration-1000 transform object-fit hover:scale-105" alt="card-img" src="https://res.cloudinary.com/besttlookk/image/upload/v1646967862/real_estate/avatar-6_surnzh.jpg"/></div>
+              <div class="p-1 border-b border-gray-300">
+                <p class="text-sm font-semibold text-gray-600 lg:text-base ">Matthew Rhodes</p>
+              </div>
+              <div class="flex justify-center p-2 space-x-4"><i class="fab fa-facebook text-blue-500 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fab fa-linkedin text-blue-800 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fab fa-twitter text-blue-400 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fas fa-envelope text-red-500 duration-300 transform cursor-pointer hover:scale-110"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="relative bg-cover bg-about" id="about">
+      <div class="absolute inset-0 bg-black opacity-70"></div>
+      <div class="relative py-16 mx-auto max-w-7xl ">
+        <h3 class="mb-4 text-3xl font-semibold text-center text-white lg:text-5xl md:text-4xl" data-aos="fade-up">About Us</h3>
+        <p class="mb-4 text-xl text-center text-gray-100 lg:text-2xl" data-aos="fade-right" data-aos-delay="800">We Are The Best Real Estate Company</p>
+        <div class="flex w-11/12 mx-auto mt-8 bg-white">
+          <div class="hidden w-6/12 lg:block" data-aos="fade-right" data-aos-delay="800"><img class="object-cover w-full h-full" alt="about" src="https://res.cloudinary.com/besttlookk/image/upload/v1646967861/real_estate/about2_qula6u.jpg"></div>
+          <div class="p-6" data-aos="fade-left" data-aos-delay="800">
+            <p class="mb-2 text-lg font-semibold text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ea.</p>
+            <p class="mb-4 text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum pariatur sint eaque ipsa neque temporibus repellendus quod.</p>
+            <p class="mb-2 text-sm text-gray-500">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quaerat.</p>
+            <ul class="pl-8 text-sm text-gray-500 list-disc marker:text-green-500" role="list">
+              <li class="mb-2 ">Lorem ipsum dolor sit.</li>
+              <li class="mb-2">Lorem ipsum lorem, ipsum. amet consectetur adipisicing.</li>
+              <li class="mb-2">Lorem ipsum dolor sit amet.</li>
+              <li class="mb-2">Lorem ipsum dolor sit amet consectetur.</li>
+              <li>Lorem ipsum sit amet.</li>
+            </ul>
+            <button class="px-4 py-2 mt-4 text-sm font-semibold text-white bg-green-500 rounded Hover:bg-green-400">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="blog">
+      <div class="bg-gray-200 ">
+        <div class="px-4 py-16 mx-auto text-center max-w-7xl">
+          <h3 class="mb-4 text-3xl font-semibold text-center text-gray-700 lg:text-4xl" data-aos="fade-up">Our Blog </h3>
+          <p class="mb-10 text-xl text-center text-gray-600 lg:text-2xl" data-aos="fade-right" data-aos-delay="1000">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, sed!</p>
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div class="flex flex-col space-y-3 bg-white border rounded shadow-md" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+              <div class="overflow-hidden h-52"><img class="object-cover w-full h-full transition duration-1000 transform hover:scale-105" alt="card-image" src="https://res.cloudinary.com/besttlookk/image/upload/v1646967862/real_estate/blog-1_alik61.jpg"/></div>
+              <div class="px-4 py-2 text-left ">
+                <p class="font-semibold text-gray-500 text-xm">10 March, 2022</p>
+                <h4 class="mb-2 text-lg font-bold text-gray-800 lg:text-2xl">Listing Inventory Trends In The Time Of COVID</h4>
+                <p class="mb-2 text-sm text-gray-500 text-600 lg:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit blanditiis neque pariatur deleniti dolorum corrupti? Lorem ipsum dolor sit amet.</p><a class="text-xs underline hover:text-blue-500" href="#">Read More</a>
+              </div>
+            </div>
+            <div class="flex flex-col space-y-3 bg-white border rounded shadow-md" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+              <div class="overflow-hidden h-52"><img class="object-cover w-full h-full transition duration-1000 transform hover:scale-105" alt="card-image" src="https://res.cloudinary.com/besttlookk/image/upload/v1646967862/real_estate/blog-2_sc3lmf.jpg"/></div>
+              <div class="px-4 py-2 text-left ">
+                <p class="font-semibold text-gray-500 text-xm">27 Feb, 2022</p>
+                <h4 class="mb-2 text-lg font-bold text-gray-800 lg:text-2xl">Check yourself before you wreck your business</h4>
+                <p class="mb-2 text-sm text-gray-500 text-600 lg:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit blanditiis neque pariatur deleniti dolorum corrupti? Lorem ipsum dolor sit amet.</p><a class="text-xs underline hover:text-blue-500" href="#">Read More</a>
+              </div>
+            </div>
+            <div class="flex flex-col space-y-3 bg-white border rounded shadow-md" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+              <div class="overflow-hidden h-52"><img class="object-cover w-full h-full transition duration-1000 transform hover:scale-105" alt="card-image" src="https://res.cloudinary.com/besttlookk/image/upload/v1646967861/real_estate/blog-3_m5ta9c.jpg"/></div>
+              <div class="px-4 py-2 text-left ">
+                <p class="font-semibold text-gray-500 text-xm">12 Feb, 2022</p>
+                <h4 class="mb-2 text-lg font-bold text-gray-800 lg:text-2xl"> Look at every deal as an opportunity to do more business</h4>
+                <p class="mb-2 text-sm text-gray-500 text-600 lg:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit blanditiis neque pariatur deleniti dolorum corrupti? Lorem ipsum dolor sit amet.</p><a class="text-xs underline hover:text-blue-500" href="#">Read More</a>
+              </div>
+            </div>
+            <div class="flex flex-col space-y-3 bg-white border rounded shadow-md" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+              <div class="overflow-hidden h-52"><img class="object-cover w-full h-full transition duration-1000 transform hover:scale-105" alt="card-image" src="https://res.cloudinary.com/besttlookk/image/upload/v1646967861/real_estate/blog-4_lhih3y.jpg"/></div>
+              <div class="px-4 py-2 text-left ">
+                <p class="font-semibold text-gray-500 text-xm">9 Jan, 2022</p>
+                <h4 class="mb-2 text-lg font-bold text-gray-800 lg:text-2xl">Want better leads? Personalize per your pillar</h4>
+                <p class="mb-2 text-sm text-gray-500 text-600 lg:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit blanditiis neque pariatur deleniti dolorum corrupti? Lorem ipsum dolor sit amet.</p><a class="text-xs underline hover:text-blue-500" href="#">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-green-500"> 
+        <div class="px-4 py-16 mx-auto text-center max-w-7xl">
+          <h3 class="mb-4 text-3xl font-semibold text-center text-white lg:text-5xl md:text-4xl" data-aos="fade-right">What Our Client Says </h3>
+          <p class="mb-10 text-xl text-center text-white lg:text-2xl" data-aos="fade-right" data-aos-delay="1000">Lorem, ipsum dolor sit Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, dicta? </p>
+          <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-20px-8 md:px-10 ">
+            <div class="flex flex-col items-center space-y-8 " data-aos="fade-right" data-aos-delay="1200">
+              <div class="overflow-hidden rounded-full lg:w-52 lg:h-52 md:w-44 md:h-44 w-36 h-36 "><img class="object-cover w-full h-full rounded-full" alt="avatar" src="https://res.cloudinary.com/besttlookk/image/upload/v1646967862/real_estate/client-1_l5mzdy.jpg"></div>
+              <div>
+                <p class="mx-auto text-lg leading-7 text-gray-100 w-96">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi laboriosam neque ab expedita praesentium in nam voluptate mollitia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, ullam?</p>
+                <p class="mt-6 text-lg font-semibold text-white lg:mt-8">Anna Norton</p>
+              </div>
+            </div>
+            <div class="flex flex-col items-center space-y-8" data-aos="fade-up" data-aos-delay="1200">
+              <div class="overflow-hidden rounded-full lg:w-52 lg:h-52 md:w-44 md:h-44 w-36 h-36 "><img class="object-cover w-full h-full rounded-full" alt="avatar" src="https://res.cloudinary.com/besttlookk/image/upload/v1646967863/real_estate/client-2_v4mqnq.jpg"></div>
+              <div>
+                <p class="mx-auto text-lg leading-7 text-gray-100 w-96">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi laboriosam neque ab expedita praesentium in nam voluptate mollitia.</p>
+                <p class="mt-6 text-lg font-semibold text-white lg:mt-8">Alfie Sanders</p>
+              </div>
+            </div>
+            <div class="flex flex-col items-center space-y-6 lg:space-y-8" data-aos="fade-left" data-aos-delay="1400"><span class="overflow-hidden rounded-full lg:w-52 lg:h-52 md:w-44 md:h-44 w-36 h-36"><img class="object-cover w-full h-full rounded-full" alt="avatar" src="https://res.cloudinary.com/besttlookk/image/upload/v1646967863/real_estate/client-3_fbujil.jpg"></span>
+              <div>
+                <p class="mx-auto text-lg leading-7 text-gray-100 w-96">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi laboriosam neque ab expedita praesentium in nam voluptate mollitia.</p>
+                <p class="mt-6 text-lg font-semibold text-white lg:mt-8">Shannon Curtis</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact"> 
+      <div>
+        <div class="px-4 py-16 mx-auto text-center max-w-7xl">
+          <h3 class="mb-4 text-3xl font-semibold text-center text-gray-700 lg:text-4xl" data-aos="fade-right">Contact Us</h3>
+          <p class="mb-10 text-xl text-center text-gray-600 lg:text-2xl" data-aos="fade-right" data-aos-delay="1000">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, sed!</p>
+          <div class="relative flex flex-col py-6 mx-auto space-y-4 bg-gray-200 contact lg:flex-row lg:space-y-O">
+            <form class="flex flex-col w-4/5 px-6 py-4 mx-auto md:w-6/12 lg:px-0" data-aos="fade-right" data-aos-delay="1000">
+              <input class="px-4 py-2 mb-4 border rounded-sm outline-none focus:ring ring-offset-2 ring-offset-gray-200 ring-green-300" type="text" placeholder="Your Name"/>
+              <input class="px-4 py-2 mb-4 border rounded-sm outline-none focus:ring ring-offset-2 ring-offset-gray-200 ring-green-300" type="email" placeholder="Your Email"/>
+              <input class="px-4 py-2 mb-4 border rounded-sm outline-none focus:ring ring-offset-2 ring-offset-gray-200 ring-green-300" type="text" placeholder="Subject"/>
+              <textarea class="px-4 py-2 mb-8 text-gray-400 border outline-none resize-none focus:ring ring-offset-2 ring-offset-gray-200 ring-green-300" cols="20" rows="10"> Write your message here...</textarea>
+              <button class="py-2 text-white bg-green-500 border-none rounded outline-none focus:ring ring-offset-2 ring-offset-gray-200 ring-green-300">Send Message</button>
+            </form>
+            <div class="px-4 text-left">
+              <div class="p-4 mb-2 bg-white" data-aos="fade-left" data-aos-delay="1000">
+                <p class="font-bold text-gray-700">Address</p>
+                <p class="text-sm text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, pariatur?</p>
+              </div>
+              <div class="p-4 mb-2 bg-white" data-aos="fade-left" data-aos-delay="1200">
+                <p class="font-bold text-gray-700">Phone</p>
+                <p class="text-sm text-gray-600">+91 4343434343</p>
+              </div>
+              <div class="p-4 mb-2 bg-white" data-aos="fade-left" data-aos-delay="1400">
+                <p class="font-bold text-gray-700">Email Address</p>
+                <p class="text-sm text-gray-600">randomemail@gmail.com</p>
+              </div>
+              <div class="p-4 bg-white" data-aos="fade-left" data-aos-delay="1600">
+                <p class="font-bold text-gray-700">Social </p>
+                <div class="flex mt-1 space-x-4"><i class="fab fa-facebook text-blue-500 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fab fa-linkedin text-blue-800 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fab fa-twitter text-blue-400 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fas fa-envelope text-red-500 duration-300 transform cursor-pointer hover:scale-110"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-green-500">
+        <div class="px-4 py-10 mx-auto text-center max-w-7xl"><i class="fas fa-envelope-open-text fa-3x text-white" data-aos="fade-up"></i>
+          <p class="my-4 text-lg font-semibold text-white" data-aos="fade-left" data-aos-delay="1000">Join our mailing to get weekly updates on our exclusive deals.</p>
+          <form data-aos="fade-right" data-aos-delay="1200">
+            <input class="px-4 py-2 mb-4 border rounded-sm outline-none focus:ring ring-offset-2 ring-offset-gray-200 ring-green-300" type="email" placeholder="Email address"/>
+            <button class="inline-block px-4 py-2 ml-6 text-green-500 bg-white border-none rounded outline-none">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="bg-gray-200">
+        <div class="px-4 py-4 mx-auto text-center max-w-7xl" data-aos="zoom-in" data-aos-delay="1000">
+          <p class="text-base md:text-lg lg:text-xl">Don’t forget to follow us on Instagram <a class="hover:text-blue-500" href="#">@empire_property</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div>
+        <div class="px-4 py-10 mx-auto max-w-7xl">
+          <div class="grid grid-cols-2 gap-8 lg:grid-cols-4">
+            <div class="px-4 col-span-full lg:col-span-1"><a class="mb-8 text-xl text-green-500 font-sansita" href="/"><span class="text-lg font-semibold ">Empire </span><i class="fab fa-empire fa-lg mr-1 "></i><span class="text-lg font-semibold ">Property</span></a>
+              <p class="mb-6 text-sm text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, obcaecati!</p>
+              <div class="flex mt-1 mb-6 space-x-4"><i class="fab fa-facebook text-blue-500 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fab fa-linkedin text-blue-800 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fab fa-twitter text-blue-400 duration-300 transform cursor-pointer hover:scale-110"></i><i class="fas fa-envelope text-red-500 duration-300 transform cursor-pointer hover:scale-110"></i></div>
+            </div>
+            <div class="px-4">
+              <p class="font-bold text-gray-800">Navigation </p>
+              <div class="flex flex-col space-y-3"><a class="text-sm text-gray-500" href="#">Home</a><a class="text-sm text-gray-500" href="#">Property </a><a class="text-sm text-gray-500" href="#">Agent </a><a class="text-sm text-gray-500" href="#">About </a><a class="text-sm text-gray-500" href="#">Blog</a></div>
+            </div>
+            <div class="px-4">
+              <p class="font-bold text-gray-800">Services</p>
+              <div class="flex flex-col space-y-3"><a class="text-sm text-gray-500" href="#">Drone Mapping</a><a class="text-sm text-gray-500" href="#">Real State </a><a class="text-sm text-gray-500" href="#">Commercial</a><a class="text-sm text-gray-500" href="#">Construction </a></div>
+            </div>
+            <div class="px-4">
+              <p class="font-bold text-gray-800">Have a Question ?</p>
+              <div class="flex flex-col space-y-3">
+                <div class="text-gray-500 "> <i class="fas fa-location-dot"></i><span class="ml-2 text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga!</span></div>
+                <div class="text-gray-500"> <i class="fas fa-phone"></i><span class="ml-2 text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga!</span></div>
+                <div class="text-gray-500 "> <i class="fas fa-envelope"></i><span class="ml-2 text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga!</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-gray-200">
+        <div class="px-4 py-4 mx-auto text-center max-w-7xl">
+          <p class="text-xs text-gray-600">Copyright ©2022 All rights reserved | This template is made by by prabhash__ranjan</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

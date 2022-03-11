@@ -82,15 +82,9 @@ function watchFiles() {
     series(devStyles, previewReload)
   );
   watch(`${options.paths.src.js}/**/*.js`, series(jsTask, previewReload));
-  watch(`${options.paths.src.img}/**/*`, series(devImages, previewReload));
-  console.log("\n\t" + logSymbols.info, "Watching for Changes..\n");
 }
 
 function devClean() {
-  console.log(
-    "\n\t" + logSymbols.info,
-    "Cleaning dist folder for fresh start.\n"
-  );
   return del([options.paths.dist.base]);
 }
 
@@ -118,7 +112,7 @@ function devStyles() {
 //! PROD: To Copy html file from src to build folder
 function prodHTML() {
   return src(`${options.paths.src.base}/**/*.html`).pipe(
-    dest(options.paths.base.base)
+    dest(options.paths.build.base)
   );
 }
 
@@ -154,12 +148,14 @@ function prodClean() {
 
 exports.default = series(
   devClean, // Clean Dist Folder
-  parallel(devStyles, jsTask, pugTask), //Run All tasks in parallel
+  series(parallel(devStyles, jsTask, pugTask), devHTML), //Run All tasks in parallel
   livePreview, // Live Preview Build
   watchFiles // Watch for Live Changes
 );
 
 exports.build = series(
   prodClean, // Clean Build Folder
-  parallel(prodStyles, prodScripts, prodHTML) //Run All tasks in parallel
+  parallel(prodStyles, prodScripts, prodHTML), //Run All tasks in parallel
+  livePreview, // Live Preview Build
+  watchFiles // Watch for Live Changes
 );
