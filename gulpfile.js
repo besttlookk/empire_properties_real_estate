@@ -149,10 +149,6 @@ function prodScripts() {
 }
 
 function prodClean() {
-  console.log(
-    "\n\t" + logSymbols.info,
-    "Cleaning build folder for fresh start.\n"
-  );
   return del([options.paths.build.base]);
 }
 
