@@ -123,6 +123,8 @@ function prodStyles() {
     .pipe(
       postcss([tailwindcss(options.config.tailwindjs), require("autoprefixer")])
     )
+    .pipe(concat({ path: "style.css" }))
+    .pipe(dest(options.paths.dist.css))
     .pipe(
       purgecss({
         content: ["src/**/*.{html,js}"],
@@ -145,6 +147,12 @@ function prodScripts() {
     .pipe(uglify())
     .pipe(dest(options.paths.build.js));
 }
+
+// function prodImages() {
+//   return src(options.paths.src.img + "/**/*")
+//     .pipe(imagemin())
+//     .pipe(dest(options.paths.build.img));
+// }
 
 function prodClean() {
   console.log(
@@ -171,6 +179,8 @@ exports.default = series(
 
 exports.build = series(
   prodClean, // Clean Build Folder
-  parallel(prodStyles, prodScripts, prodHTML), //Run All tasks in parallel
-  buildFinish
+  series(prodHTML, parallel(prodStyles, prodScripts)), //Run All tasks in parallel
+  buildFinish,
+  livePreview, // Live Preview Build
+  watchFiles // Watch for Live Changes
 );
