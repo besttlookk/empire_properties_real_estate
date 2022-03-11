@@ -7,7 +7,6 @@ const sass = require("gulp-sass")(require("sass")); //For Compiling SASS files
 const postcss = require("gulp-postcss"); //For Compiling tailwind utilities with tailwind config
 const concat = require("gulp-concat"); //For Concatinating js,css files
 const uglify = require("gulp-terser"); //To Minify JS files
-const imagemin = require("gulp-imagemin"); //To Optimize Images
 const cleanCSS = require("gulp-clean-css"); //To Minify CSS files
 const purgecss = require("gulp-purgecss"); // Remove Unused CSS from Styles
 
@@ -41,11 +40,18 @@ function previewReload(done) {
   done();
 }
 
-// Converts index.pug into index.html
+//! DEV: To Convert PUG Files to HTML
 function pugTask() {
   return src(`${options.paths.src.base}/pug/index.pug`)
     .pipe(pug({ pretty: true }))
-    .pipe(dest(options.paths.dist.base));
+    .pipe(dest(options.paths.src.base));
+}
+
+//! DEV: To Copy html file from src to dist folder
+function devHTML() {
+  return src(`${options.paths.src.base}/**/*.html`).pipe(
+    dest(options.paths.dist.base)
+  );
 }
 
 // JavaScript Task
@@ -66,12 +72,6 @@ function devStyles() {
     )
     .pipe(concat({ path: "style.css" }))
     .pipe(dest(options.paths.dist.css));
-}
-
-function devImages() {
-  return src(`${options.paths.src.img}/**/*`).pipe(
-    dest(options.paths.dist.img)
-  );
 }
 
 function watchFiles() {
@@ -115,16 +115,18 @@ function devStyles() {
     .pipe(dest(options.paths.dist.css));
 }
 
+//!    ======= PRODUCTION TASKS BELOW ========
+
+//! PROD: To Copy html file from src to build folder
+function prodHTML() {
+  return src(`${options.paths.src.base}/**/*.html`).pipe(
+    dest(options.paths.base.base)
+  );
+}
+
 function prodStyles() {
-  const tailwindcss = require("tailwindcss");
-  return src(`${options.paths.src.css}/**/*.scss`)
-    .pipe(sass().on("error", sass.logError))
-    .pipe(dest(options.paths.src.css))
-    .pipe(
-      postcss([tailwindcss(options.config.tailwindjs), require("autoprefixer")])
-    )
+  return src(`${options.paths.src.css}/**/*.css`)
     .pipe(concat({ path: "style.css" }))
-    .pipe(dest(options.paths.dist.css))
     .pipe(
       purgecss({
         content: ["src/**/*.{html,js}"],
@@ -147,12 +149,6 @@ function prodScripts() {
     .pipe(uglify())
     .pipe(dest(options.paths.build.js));
 }
-
-// function prodImages() {
-//   return src(options.paths.src.img + "/**/*")
-//     .pipe(imagemin())
-//     .pipe(dest(options.paths.build.img));
-// }
 
 function prodClean() {
   console.log(
@@ -180,7 +176,5 @@ exports.default = series(
 exports.build = series(
   prodClean, // Clean Build Folder
   series(prodHTML, parallel(prodStyles, prodScripts)), //Run All tasks in parallel
-  buildFinish,
-  livePreview, // Live Preview Build
-  watchFiles // Watch for Live Changes
+  buildFinish
 );

@@ -90,38 +90,38 @@ $color-primary-dark: #06634c;
         transform: translateX(1rem);
         // transition: all 0.4s;
       }
-    }
 
-    &__link--1 {
-      transition-delay: 0.1s;
-    }
+      &:nth-of-type(1) {
+        transition-delay: 0.1s;
+      }
 
-    &__link--2 {
-      transition-delay: 0.2s;
-    }
+      &:nth-of-type(2) {
+        transition-delay: 0.2s;
+      }
 
-    &__link--3 {
-      transition-delay: 0.3s;
-    }
+      &:nth-of-type(3) {
+        transition-delay: 0.3s;
+      }
 
-    &__link--4 {
-      transition-delay: 0.4s;
-    }
+      &:nth-of-type(4) {
+        transition-delay: 0.4s;
+      }
 
-    &__link--5 {
-      transition-delay: 0.5s;
-    }
+      &:nth-of-type(5) {
+        transition-delay: 0.5s;
+      }
 
-    &__link--6 {
-      transition-delay: 0.6s;
-    }
+      &:nth-of-type(6) {
+        transition-delay: 0.6s;
+      }
 
-    &__link--7 {
-      transition-delay: 0.7s;
-    }
+      &:nth-of-type(7) {
+        transition-delay: 0.7s;
+      }
 
-    &__link--8 {
-      transition-delay: 0.8s;
+      &:nth-of-type(8) {
+        transition-delay: 0.8s;
+      }
     }
 
     &--active {
