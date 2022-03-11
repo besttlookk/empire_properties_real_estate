@@ -5,10 +5,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         hero: "url('../img/pic2.jpg')",
-        help: "url('../img/pic3.png')",
+        help: "url(https://res.cloudinary.com/besttlookk/image/upload/v1646967863/real_estate/pic3_mqjxy8.png)",
         about:
           "url(https://res.cloudinary.com/besttlookk/image/upload/v1646967861/real_estate/about_cqiyhy.jpg)",
-        contact: "url('../img/contact.jpg')",
       },
 
       fontFamily: {
