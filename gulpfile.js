@@ -14,8 +14,6 @@ const pug = require("gulp-pug");
 const terser = require("gulp-terser");
 const babel = require("gulp-babel");
 
-const logSymbols = require("log-symbols"); //For Symbolic Console logs :) :P
-
 //Load Previews on Browser on dev
 function livePreview(done) {
   browserSync.init({
@@ -156,14 +154,6 @@ function prodClean() {
     "Cleaning build folder for fresh start.\n"
   );
   return del([options.paths.build.base]);
-}
-
-function buildFinish(done) {
-  console.log(
-    "\n\t" + logSymbols.info,
-    `Production build is complete. Files are located at ${options.paths.build.base}\n`
-  );
-  done();
 }
 
 exports.default = series(
