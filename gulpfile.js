@@ -9,7 +9,7 @@ const concat = require("gulp-concat"); //For Concatinating js,css files
 const uglify = require("gulp-terser"); //To Minify JS files
 const cleanCSS = require("gulp-clean-css"); //To Minify CSS files
 const purgecss = require("gulp-purgecss"); // Remove Unused CSS from Styles
-
+const htmlmin = require("gulp-htmlmin");
 const pug = require("gulp-pug");
 const terser = require("gulp-terser");
 const babel = require("gulp-babel");
@@ -40,7 +40,7 @@ function previewReload(done) {
 //! DEV: To Convert PUG Files to HTML
 function pugTask() {
   return src(`${options.paths.src.base}/pug/index.pug`)
-    .pipe(pug())
+    .pipe(pug({ pretty: true }))
     .pipe(dest(options.paths.src.base));
 }
 
@@ -87,13 +87,6 @@ function devClean() {
   return del([options.paths.dist.base]);
 }
 
-//Production Tasks (Optimized Build for Live/Production Sites)
-function prodHTML() {
-  return src(`${options.paths.src.base}/pug/index.pug`)
-    .pipe(pug())
-    .pipe(dest(options.paths.build.base));
-}
-
 function devStyles() {
   const tailwindcss = require("tailwindcss");
   return src(`${options.paths.src.css}/**/*.scss`)
@@ -110,9 +103,9 @@ function devStyles() {
 
 //! PROD: To Copy html file from src to build folder
 function prodHTML() {
-  return src(`${options.paths.src.base}/**/*.html`).pipe(
-    dest(options.paths.build.base)
-  );
+  return src(`${options.paths.src.base}/**/*.html`)
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(dest(options.paths.build.base));
 }
 
 function prodStyles() {
@@ -154,5 +147,5 @@ exports.default = series(
 
 exports.build = series(
   prodClean, // Clean Build Folder
-  parallel(prodStyles, prodScripts, prodHTML), //Run All tasks in parallel
+  parallel(prodStyles, prodScripts, prodHTML) //Run All tasks in parallel
 );
