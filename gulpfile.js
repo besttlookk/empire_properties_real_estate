@@ -115,23 +115,6 @@ function devStyles() {
     .pipe(dest(options.paths.dist.css));
 }
 
-// function prodStyles() {
-//   return src(`${options.paths.dist.css}/**/*`)
-//     .pipe(
-//       purgecss({
-//         content: ["src/**/*.{html,js}"],
-//         defaultExtractor: (content) => {
-//           const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [];
-//           const innerMatches =
-//             content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || [];
-//           return broadMatches.concat(innerMatches);
-//         },
-//       })
-//     )
-//     .pipe(cleanCSS({ compatibility: "ie8" }))
-//     .pipe(dest(options.paths.build.css));
-// }
-
 function prodStyles() {
   const tailwindcss = require("tailwindcss");
   return src(`${options.paths.src.css}/**/*.scss`)
@@ -163,12 +146,6 @@ function prodScripts() {
     .pipe(dest(options.paths.build.js));
 }
 
-function prodImages() {
-  return src(options.paths.src.img + "/**/*")
-    .pipe(imagemin())
-    .pipe(dest(options.paths.build.img));
-}
-
 function prodClean() {
   console.log(
     "\n\t" + logSymbols.info,
@@ -187,13 +164,13 @@ function buildFinish(done) {
 
 exports.default = series(
   devClean, // Clean Dist Folder
-  parallel(devStyles, jsTask, devImages, pugTask), //Run All tasks in parallel
+  parallel(devStyles, jsTask, pugTask), //Run All tasks in parallel
   livePreview, // Live Preview Build
   watchFiles // Watch for Live Changes
 );
 
 exports.build = series(
   prodClean, // Clean Build Folder
-  parallel(prodStyles, prodScripts, prodImages, prodHTML), //Run All tasks in parallel
+  parallel(prodStyles, prodScripts, prodHTML), //Run All tasks in parallel
   buildFinish
 );
