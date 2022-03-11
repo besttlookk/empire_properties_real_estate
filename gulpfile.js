@@ -115,8 +115,31 @@ function devStyles() {
     .pipe(dest(options.paths.dist.css));
 }
 
+// function prodStyles() {
+//   return src(`${options.paths.dist.css}/**/*`)
+//     .pipe(
+//       purgecss({
+//         content: ["src/**/*.{html,js}"],
+//         defaultExtractor: (content) => {
+//           const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [];
+//           const innerMatches =
+//             content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || [];
+//           return broadMatches.concat(innerMatches);
+//         },
+//       })
+//     )
+//     .pipe(cleanCSS({ compatibility: "ie8" }))
+//     .pipe(dest(options.paths.build.css));
+// }
+
 function prodStyles() {
-  return src(`${options.paths.dist.css}/**/*`)
+  const tailwindcss = require("tailwindcss");
+  return src(`${options.paths.src.css}/**/*.scss`)
+    .pipe(sass().on("error", sass.logError))
+    .pipe(dest(options.paths.src.css))
+    .pipe(
+      postcss([tailwindcss(options.config.tailwindjs), require("autoprefixer")])
+    )
     .pipe(
       purgecss({
         content: ["src/**/*.{html,js}"],

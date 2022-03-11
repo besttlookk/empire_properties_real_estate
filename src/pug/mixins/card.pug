@@ -2,7 +2,7 @@ mixin card(cardData)
    div(class="flex flex-col border rounded shadow-md " data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000")
       //- card-image
       div(class="overflow-hidden h-52")
-        img(alt="card-image" src=`./img/property-${cardData.image}.jpg` class="object-cover w-full h-full transition duration-1000 transform hover:scale-105")
+        img(alt="card-image" src=`${cardData.image}` class="object-cover w-full h-full transition duration-1000 transform hover:scale-105")
       //- card-content
       div(class="flex-1 p-4")
         p(class="text-sm font-bold text-gray-500") Rs #{cardData.price}
@@ -41,7 +41,7 @@ mixin agentCard(cardData)
   div(class="flex flex-col border rounded shadow-md" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000")
     //- card image
     div(class="overflow-hidden h-80 lg:h-96")
-      img(alt="card-img" src=`./img/avatar-${cardData.image}.jpg` class="object-cover object-top w-full h-full transition duration-1000 transform object-fit hover:scale-105")
+      img(alt="card-img" src=`${cardData.image}` class="object-cover object-top w-full h-full transition duration-1000 transform object-fit hover:scale-105")
    
     //- card-content
     div(class="p-1 border-b border-gray-300")
@@ -62,7 +62,7 @@ mixin blogCard(cardData)
   div(class="flex flex-col space-y-3 bg-white border rounded shadow-md" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000")
       //- card-image
       div(class="overflow-hidden h-52")
-        img(alt="card-image" src=`./img/blog-${cardData.image}.jpg` class="object-cover w-full h-full transition duration-1000 transform hover:scale-105")
+        img(alt="card-image" src=`${cardData.image}` class="object-cover w-full h-full transition duration-1000 transform hover:scale-105")
 
       //- card-content
       div(class="px-4 py-2 text-left ")

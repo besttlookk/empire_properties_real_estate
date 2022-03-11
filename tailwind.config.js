@@ -6,7 +6,8 @@ module.exports = {
       backgroundImage: {
         hero: "url('../img/pic2.jpg')",
         help: "url('../img/pic3.png')",
-        about: "url('../img/about.jpg')",
+        about:
+          "url(https://res.cloudinary.com/besttlookk/image/upload/v1646967861/real_estate/about_cqiyhy.jpg)",
         contact: "url('../img/contact.jpg')",
       },
 
