@@ -13,6 +13,8 @@ const htmlmin = require("gulp-htmlmin");
 const pug = require("gulp-pug");
 const terser = require("gulp-terser");
 const babel = require("gulp-babel");
+const tailwindcss = require("tailwindcss");
+const autoprefixer = require("autoprefixer");
 
 //Load Previews on Browser on dev
 function livePreview(done) {
@@ -108,20 +110,27 @@ function prodHTML() {
     .pipe(dest(options.paths.build.base));
 }
 
+// function prodStyles() {
+//   return src(`${options.paths.src.css}/**/*.css`)
+//     .pipe(concat({ path: "style.css" }))
+//     .pipe(
+//       purgecss({
+//         content: ["src/**/*.{html,js}"],
+//         defaultExtractor: (content) => {
+//           const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [];
+//           const innerMatches =
+//             content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || [];
+//           return broadMatches.concat(innerMatches);
+//         },
+//       })
+//     )
+//     .pipe(cleanCSS({ compatibility: "ie8" }))
+//     .pipe(dest(options.paths.build.css));
+// }
+
 function prodStyles() {
-  return src(`${options.paths.src.css}/**/*.css`)
-    .pipe(concat({ path: "style.css" }))
-    .pipe(
-      purgecss({
-        content: ["src/**/*.{html,js}"],
-        defaultExtractor: (content) => {
-          const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [];
-          const innerMatches =
-            content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || [];
-          return broadMatches.concat(innerMatches);
-        },
-      })
-    )
+  return src(`${options.paths.dist.css}/**/*.css`)
+    .pipe(purgecss({ content: ["**/*.html, src/**/*.html"] }))
     .pipe(cleanCSS({ compatibility: "ie8" }))
     .pipe(dest(options.paths.build.css));
 }
