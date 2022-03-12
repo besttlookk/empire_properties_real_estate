@@ -57,7 +57,6 @@ function devHTML() {
 function jsTask() {
   return src(`${options.paths.src.js}/script.js`, { sourcemaps: true })
     .pipe(babel({ presets: ["@babel/preset-env"] }))
-    .pipe(terser())
     .pipe(dest(options.paths.dist.js, { sourcemaps: "." }));
 }
 
@@ -89,18 +88,6 @@ function devClean() {
   return del([options.paths.dist.base]);
 }
 
-function devStyles() {
-  const tailwindcss = require("tailwindcss");
-  return src(`${options.paths.src.css}/**/*.scss`)
-    .pipe(sass().on("error", sass.logError))
-    .pipe(dest(options.paths.src.css))
-    .pipe(
-      postcss([tailwindcss(options.config.tailwindjs), require("autoprefixer")])
-    )
-    .pipe(concat({ path: "style.css" }))
-    .pipe(dest(options.paths.dist.css));
-}
-
 //!    ======= PRODUCTION TASKS BELOW ========
 
 //! PROD: To Copy html file from src to build folder
@@ -127,17 +114,8 @@ function prodStyles() {
     .pipe(dest(options.paths.build.css));
 }
 
-// function prodStyles() {
-//   return src(`${options.paths.dist.css}/**/*.css`)
-//     .pipe(purgecss({ content: ["**/*.html, dist/**/*.html"] }))
-//     .pipe(cleanCSS({ level: 2 }))
-//     .pipe(dest(options.paths.build.css));
-// }
-
 function prodScripts() {
-  return src(`${options.paths.src.js}/**/*.js`)
-    .pipe(babel({ presets: ["@babel/preset-env"] }))
-    .pipe(concat({ path: "scripts.js" }))
+  return src(`${options.paths.dist.js}/**/*.js`)
     .pipe(uglify())
     .pipe(dest(options.paths.build.js));
 }
