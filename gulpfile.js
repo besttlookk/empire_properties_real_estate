@@ -105,35 +105,34 @@ function devStyles() {
 
 //! PROD: To Copy html file from src to build folder
 function prodHTML() {
-  return src(`${options.paths.src.base}/**/*.html`)
+  return src(`${options.paths.dist.base}/**/*.html`)
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest(options.paths.build.base));
 }
 
-// function prodStyles() {
-//   return src(`${options.paths.src.css}/**/*.css`)
-//     .pipe(concat({ path: "style.css" }))
-//     .pipe(
-//       purgecss({
-//         content: ["src/**/*.{html,js}"],
-//         defaultExtractor: (content) => {
-//           const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [];
-//           const innerMatches =
-//             content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || [];
-//           return broadMatches.concat(innerMatches);
-//         },
-//       })
-//     )
-//     .pipe(cleanCSS({ compatibility: "ie8" }))
-//     .pipe(dest(options.paths.build.css));
-// }
-
 function prodStyles() {
   return src(`${options.paths.dist.css}/**/*.css`)
-    .pipe(purgecss({ content: ["**/*.html, src/**/*.html"] }))
+    .pipe(
+      purgecss({
+        content: ["src/**/*.{html,js}"],
+        defaultExtractor: (content) => {
+          const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [];
+          const innerMatches =
+            content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || [];
+          return broadMatches.concat(innerMatches);
+        },
+      })
+    )
     .pipe(cleanCSS({ compatibility: "ie8" }))
     .pipe(dest(options.paths.build.css));
 }
+
+// function prodStyles() {
+//   return src(`${options.paths.dist.css}/**/*.css`)
+//     .pipe(purgecss({ content: ["**/*.html, dist/**/*.html"] }))
+//     .pipe(cleanCSS({ level: 2 }))
+//     .pipe(dest(options.paths.build.css));
+// }
 
 function prodScripts() {
   return src(`${options.paths.src.js}/**/*.js`)
