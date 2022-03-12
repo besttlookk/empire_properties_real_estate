@@ -11,10 +11,7 @@ const cleanCSS = require("gulp-clean-css"); //To Minify CSS files
 const purgecss = require("gulp-purgecss"); // Remove Unused CSS from Styles
 const htmlmin = require("gulp-htmlmin");
 const pug = require("gulp-pug");
-const terser = require("gulp-terser");
 const babel = require("gulp-babel");
-const tailwindcss = require("tailwindcss");
-const autoprefixer = require("autoprefixer");
 
 //Load Previews on Browser on dev
 function livePreview(done) {
