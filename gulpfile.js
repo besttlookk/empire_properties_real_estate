@@ -39,8 +39,8 @@ function previewReload(done) {
 //! DEV: To Convert PUG Files to HTML
 function pugTask() {
   return src(`${options.paths.src.base}/pug/index.pug`)
-    .pipe(pug())
-    .pipe(dest(options.paths.src.base));
+    .pipe(pug({ pretty: true }))
+    .pipe(dest(options.paths.dist.base));
 }
 
 //! DEV: To Copy html file from src to dist folder
@@ -122,11 +122,13 @@ function prodClean() {
 }
 
 exports.default = series(
+  livePreview, // Live Preview Build
   devClean, // Clean Dist Folder
   series(parallel(devStyles, jsTask, pugTask), devHTML), //Run All tasks in parallel
-  livePreview, // Live Preview Build
   watchFiles // Watch for Live Changes
 );
+
+// exports.default = series(pugTask, devStyles, jsTask, livePreview, watchFiles);
 
 exports.build = series(
   prodClean, // Clean Build Folder
